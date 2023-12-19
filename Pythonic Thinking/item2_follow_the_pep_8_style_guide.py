@@ -22,4 +22,13 @@ https://peps.python.org/pep-0008/
 # CLASSES SHOUD BE IN CAPITALIZED FORMAT
 # MODUE LEVEL CONSTANTS SHOULD BE IN ALL_CAPS FORMAT
 # INSTANCE METHODS IN CLASSES SHOULD USE self, WHICH REFERS TO THE OBJECT, AS THE NAME OF THE FIRST PARAMETER
-# CLASS METHODS SHOULD USE cls, which refers to the class, as the name of the first paramater.
+# CLASS METHODS SHOULD USE cls, which refers to the class, as the name of the first paramater
+
+"""EXPRESSION AND STATMENT"""
+# use if not a is b       avoid if a is not b
+# for checking empty lists and string use if not somelist
+# don't use single line if while for statement spread it into multiple lines
+# if you can't ifr an expression on one line, support it with parentheses and add line breaks and intendation to make it easier to read
+# prefer suppording multiline expression with parentheses over using the \line continuation character
+
+"""How to use \ for multiline expression"""
