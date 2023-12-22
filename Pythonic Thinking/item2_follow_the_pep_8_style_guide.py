@@ -32,3 +32,14 @@ https://peps.python.org/pep-0008/
 # prefer suppording multiline expression with parentheses over using the \line continuation character
 
 """How to use \ for multiline expression"""
+
+
+
+"""IMPORTS"""
+#from bar import foo
+"""RELATIVE IMPORTS"""
+#from . import foo
+
+"""NOTE"""
+# USE PYLINT TOOL TO GET PEP 8 STYLE GUIDE
+# SEARCH : "https://www.pylint.org"
