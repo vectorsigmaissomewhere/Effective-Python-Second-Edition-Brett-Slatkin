@@ -74,3 +74,20 @@ print(b'foo' == 'foo')
 """
 Here the output will be false
 """
+
+
+
+#The % operator works with format strings for each type, respectively
+#pass bytes instance to bytes instance 
+print(b'red %s' % b'blue') #output b'red blue'
+#pass str instance to str instance
+print('red %s' % 'blue') #output b'red blue'
+#pass str instance to bytes instance
+print(b'red %s' % 'blue') #output python doesn't know what binary text encoding to use
+#pass bytes instance to str instance
+print('red %s' % b'blue') #output same
+
+#trying to write a binary data in a file with the file opened in write mode can cause an error
+with open('data.bin','w') as f:
+    f.write(b'\xf1\xf2\xf3\xf4\xf5')
+    
