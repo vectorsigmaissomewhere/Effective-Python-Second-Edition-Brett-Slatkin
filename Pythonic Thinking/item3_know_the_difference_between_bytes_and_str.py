@@ -90,4 +90,15 @@ print('red %s' % b'blue') #output same
 #trying to write a binary data in a file with the file opened in write mode can cause an error
 with open('data.bin','w') as f:
     f.write(b'\xf1\xf2\xf3\xf4\xf5')
-    
+#solution you must use wb mode to write binary data
+with open('data.bin','wb') as f:
+    f.write(b'\xf1\xf2\xf3\xf4\xf5')
+
+#same thing goes with reading data from files
+with open('data.bin','r') as f:
+  data=f.read() #output is error
+ #solution use rb mode
+ with open('data.bin','rb') as f:
+  data=f.read()
+
+  
