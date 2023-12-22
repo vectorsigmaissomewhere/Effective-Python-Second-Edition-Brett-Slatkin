@@ -37,3 +37,21 @@ def to_str(bytes_or_str):
 print(repr(to_str(b'foo')))
 print(repr(to_str('bar')))
 
+# you can add bytes instance to bytes instance and 
+# you can add str instance to str instance
+# you cannot add bytes instance with str instance
+"""This below program will show how you can add bytes instance with bytes instance and str instance with str instance"""
+print(b'one' + b' two')
+print('one' + ' two')
+"""
+output
+b'one two'
+one two
+"""
+
+"""This below program shows how you cannot add bytes instance with str instance"""
+print(b'one' + ' two')
+
+"""
+output will be some form of error
+"""
