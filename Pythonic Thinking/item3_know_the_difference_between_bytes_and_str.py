@@ -55,3 +55,22 @@ print(b'one' + ' two')
 """
 output will be some form of error
 """
+
+#you can compare bytes instance with bytes instance
+#and string instance to string instance
+assert b'red' > b'blue'
+assert 'red' > 'blue'
+"""
+you will get no output
+"""
+# you cannot compare bytes instance with str instance
+assert b'red' > ' blue'
+"""
+your output will be some form of error
+"""
+
+#comparing bytes instance and str instance will always result to False
+print(b'foo' == 'foo')
+"""
+Here the output will be false
+"""
