@@ -101,4 +101,15 @@ with open('data.bin','r') as f:
  with open('data.bin','rb') as f:
   data=f.read()
 
+#String encoding
+with open('data.bin','r', encoding='utf-8') as f:
+  data=f.read()
+
+#check which encoding is used in your system 
+import locale
+print(locale.getpreferredencoding())
+
+#read or write binary data with mode like
+# rb or wb
+
   
