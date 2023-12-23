@@ -110,6 +110,6 @@ import locale
 print(locale.getpreferredencoding())
 
 #read or write binary data with mode like
-# rb or wb
+# rb or wb.
 
   
