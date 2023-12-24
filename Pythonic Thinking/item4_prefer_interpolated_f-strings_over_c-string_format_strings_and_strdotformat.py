@@ -67,3 +67,9 @@ print(formatted)
 Max loves food. See Max cook.
 """
 #solution kind of use title method in this case
+formatted=template %(name.title(),name.title())
+print(formatted)
+#output
+"""
+Max loves food. See Max cook.
+"""
