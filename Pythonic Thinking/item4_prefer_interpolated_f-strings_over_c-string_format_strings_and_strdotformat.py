@@ -1,3 +1,6 @@
+""" 
+                    C STYLE STRING FORMATTTING 
+"""
 #Use % to convert binary values and hexadecimal values to integer strings
 a=0b10111011
 b=0xc5f
@@ -99,4 +102,14 @@ print(formatted)
 """
 Today's soup is lentil.
 Today's soup is lentil, buy one get two kumamoto oysters, and our special entree is schnitzel
+"""
+
+
+
+
+
+"""
+                TILL NOW WE WERE FORMATTING STRINGS IN C SYLE NOW 
+                WE WILL USE format build-in and str.format 
+                
 """
