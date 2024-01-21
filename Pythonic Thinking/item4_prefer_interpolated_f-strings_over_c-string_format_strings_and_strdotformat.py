@@ -73,3 +73,30 @@ print(formatted)
 """
 Max loves food. See Max cook.
 """
+
+
+
+"""FOURTH PROBLEM"""
+# USING DICTIONARIES IN FORMATTING EXPRESSIONS
+# in single line
+soup = 'lentil'
+formatted = 'Today\'s soup is %(soup)s.' % {'soup': soup}
+print(formatted)
+
+# multiple lines with triple-quotes for clarity
+menu = {
+    'soup': 'lentil',
+    'oyster': 'kumamoto',
+    'special': 'schnitzel',
+}
+template = ('Today\'s soup is %(soup)s, '
+            'buy one get two %(oyster)s oysters, '  
+            'and our special entree is %(special)s'  
+            )
+formatted = template % menu
+print(formatted)
+#  OUTPUT
+"""
+Today's soup is lentil.
+Today's soup is lentil, buy one get two kumamoto oysters, and our special entree is schnitzel
+"""
