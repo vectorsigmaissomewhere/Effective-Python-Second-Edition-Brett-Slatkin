@@ -24,3 +24,6 @@ fibonacci((0,), {}) -> 0
 fibonacci((2,), {}) -> 1
 fibonacci((4,), {}) -> 3
 """
+
+print(fibonacci)
+# <function trace.<locals>.wrapper at 0x7cc1915887c0>
