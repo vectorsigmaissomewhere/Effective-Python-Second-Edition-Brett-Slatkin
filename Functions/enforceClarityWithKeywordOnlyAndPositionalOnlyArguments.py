@@ -84,3 +84,55 @@ print(result)
 # inf
 
 print("\nPROGRAM NUMBER 4")
+# here the / Symbol indicates where positional argument ends
+def safe_division_d(numerator,denominator,/,*,ignore_overflow=False,ignore_zero_division=False):
+    try:
+        return numerator/denominator
+    except OverflowError:
+        if ignore_overflow:
+            return 0
+        else:
+            raise
+    except ZeroDivisionError:
+        if ignore_zero_division:
+            return float('inf')
+        else:
+            raise
+
+result = safe_division_d(2,5)
+print(result)
+# o.4
+
+# ===============THE MOST IMPORTANT THING=========================
+print("\n PROGRAM NUMBER 5")
+# the paramter name between the / and * symbols indicate that the argument can be passed by position or by keyword
+def safe_division_e(numerator,denominator,/,ndigits=10,*,ignore_overflow=False,ignore_zero_division=False):
+    try:
+        fraction = numerator/denominator
+        return round(fraction,ndigits)
+    except OverflowError:
+        if ignore_zero_division:
+            return float('inf')
+        else:
+            raise
+
+result = safe_division_e(22,7)
+print(result)
+
+result = safe_division_e(22,7,5)
+print(result)
+
+result = safe_division_e(22,7,ndigits=2)
+print(result)
+
+# 3.1428571429
+# 3.14286
+# 3.14
+    
+
+# =====================================CONCLUISION=============================
+# keyword only argument forces callers to supply certain arguments by keyword only
+# positional only argument ensures that calles can't supply certain paramters using keywords 
+# means positional onlly arguments are defined before a single / in the argument list
+
+# parametes between the / and * characters in the argument list can be supplied by position or keyword 
