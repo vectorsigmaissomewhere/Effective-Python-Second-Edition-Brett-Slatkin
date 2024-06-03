@@ -52,3 +52,16 @@ def fibonacci(n):
 help(fibonacci)
 
 print(pickle.dumps(fibonacci))
+"""
+Help on function fibonacci in module __main__:
+
+fibonacci(n)
+    Return the n-th Fibonacci number
+
+b'\x80\x04\x95\x1a\x00\x00\x00\x00\x00\x00\x00\x8c\x08__main__\x94\x8c\tfibonacci\x94\x93\x94.'
+"""
+
+
+# ======================================CONCLUSION===========================================
+# decorators in python are syntax to allow one function to modify another function at runtime
+# use wraps decorator from the functions build-in module when you define your own decorators to avoid issues
