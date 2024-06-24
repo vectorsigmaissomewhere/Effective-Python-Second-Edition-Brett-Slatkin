@@ -2,7 +2,7 @@
 ```text
 The order of iteration would not match the order in which the items were inserted
 ```
-Code illustation
+Code illustration
 ```python
 baby_names = {
     'cat': 'kitten',
