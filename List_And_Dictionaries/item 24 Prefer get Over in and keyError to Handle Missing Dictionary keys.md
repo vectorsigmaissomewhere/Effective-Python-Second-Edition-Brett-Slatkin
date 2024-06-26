@@ -177,3 +177,24 @@ third way:
 names = votes.setdefault(key, [])
 names.append(who)
 ```
+
+7 In example number 6 the third way of using setdefault method creates a program 
+``text
+
+```
+code explaination
+```python
+data = {}
+key = 'foo'
+value = []
+data.setdefault(key, value)
+print('Before:', data)
+value.append('hello')
+print('After:', data)
+```
+
+output
+```text
+Before: {'foo': []}
+After: {'foo': ['hello']}
+```
