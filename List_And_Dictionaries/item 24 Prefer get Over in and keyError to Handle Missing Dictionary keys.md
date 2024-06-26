@@ -94,9 +94,39 @@ output
 ```text
 powernickel 2
 sourdough 1
-wheat 
+wheat 3
 ```
 NOTE
 ```text
 better use Counter class from the collections for maintaining dictionaries like this
 ````
+
+The above program was to count the votes
+
+about program number 4
+```text
+now making changes to values of dictionaries of more complex types
+like a list
+```
+
+4 Program to know who voted for what type of breed
+```python
+votes = {
+    'baguette': ['Bob', 'Alice'],
+    'ciabatta': ['Coco', 'Deb'],
+}
+
+key = 'brioche'
+who = 'Elmer'
+
+if key in votes:
+    names = votes[key]
+else:
+    votes[key] = names = [] # we can even write this in two lines
+names.append(who)
+print(votes)
+```
+output
+```text
+{'baguette': ['Bob', 'Alice'], 'ciabatta': ['Coco', 'Deb'], 'brioche': ['Elmer']}
+```
