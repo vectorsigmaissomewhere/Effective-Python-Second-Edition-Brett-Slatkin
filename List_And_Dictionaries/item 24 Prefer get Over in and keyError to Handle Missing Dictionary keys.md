@@ -61,3 +61,36 @@ pumpernickel 2
 sourdough 1
 wheat 1 
 ```
+
+3 Program for counting votes
+
+counters = {
+    'powernickel': 2,
+    'sourdough': 1,
+}
+
+key = 'wheat'
+
+# since key is not in counters value of wheat incremented to 1
+if key not in counters:
+    counters[key] = 0
+counters[key] += 1 
+
+# since key is in counters value of wheat is incremented to 2
+if key in counters:
+    counters[key] += 1
+else:
+    counters[key] = 1
+# since key is present no exception is raised
+try:
+    counters[key] += 1
+except KeyError:
+    counters[key] = 1
+
+for key,value in counters.items():
+    print(key,value)
+    
+NOTE
+```text
+better use Counter class from the collections for maintaining dictionaries like this
+````
