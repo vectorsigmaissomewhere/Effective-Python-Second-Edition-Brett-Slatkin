@@ -130,3 +130,26 @@ output
 ```text
 {'baguette': ['Bob', 'Alice'], 'ciabatta': ['Coco', 'Deb'], 'brioche': ['Elmer']}
 ```
+
+5 Making program number 4 more efficient by using KeyError exception instead of using in
+```python
+votes = {
+    'baguette': ['Bob', 'Alice'],
+    'ciabatta': ['Coco', 'Deb'],
+}
+
+key = 'brioche'
+who = 'Elmer'
+
+try:
+    names = votes[key]
+except KeyError:
+    votes[key] = names = []
+names.append(who)
+print(votes)
+```
+
+output
+```text
+{'baguette': ['Bob', 'Alice'], 'ciabatta': ['Coco', 'Deb'], 'brioche': ['Elmer']}
+```
