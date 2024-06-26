@@ -178,9 +178,12 @@ names = votes.setdefault(key, [])
 names.append(who)
 ```
 
-7 In example number 6 the third way of using setdefault method creates a program 
-``text
-
+7 In example number 6 the third way of using setdefault method creates a problem
+```text
+one access and two assignments
+When to use setdafualt method
+- to handle missing dictionary keys, when the default values are cheap to construct, mutable and
+there is no potential for raising exception
 ```
 code explaination
 ```python
@@ -197,4 +200,13 @@ output
 ```text
 Before: {'foo': []}
 After: {'foo': ['hello']}
+```
+
+Conclusion
+```text
+There are four ways to detect missing keys in dictionary
+They are, in expressions, KeyError exceptions , the get method, and the setdefault method
+
+The best way is to use get method
+and setdefault method according to the problem 
 ```
