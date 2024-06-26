@@ -153,3 +153,27 @@ output
 ```text
 {'baguette': ['Bob', 'Alice'], 'ciabatta': ['Coco', 'Deb'], 'brioche': ['Elmer']}
 ```
+
+6 Other ways of making program number 4 more efficient
+```python
+one way: 
+# using get method to fetch a list value when the key is present
+names = votes.get(key) # getting the values of a key in dictionary 
+if names is None:
+     votes[key] = names = []
+names.append(who)
+
+two way: 
+# using walrus operator to make the get method fetching process shorter
+if (names := votes.get(key)) is None:
+    votes[key] = names = []
+names.append(who)
+
+third way:
+# using setdefault method which makes the program even more shorter
+# first it checks if the key is present or not
+# if the key is not present if gives a default value
+# a quick demo
+names = votes.setdefault(key, [])
+names.append(who)
+```
