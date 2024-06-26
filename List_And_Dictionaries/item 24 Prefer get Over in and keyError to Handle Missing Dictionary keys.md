@@ -63,7 +63,7 @@ wheat 1
 ```
 
 3 Program for counting votes
-
+```python
 counters = {
     'powernickel': 2,
     'sourdough': 1,
@@ -89,7 +89,13 @@ except KeyError:
 
 for key,value in counters.items():
     print(key,value)
-    
+```
+output
+```text
+powernickel 2
+sourdough 1
+wheat 
+```
 NOTE
 ```text
 better use Counter class from the collections for maintaining dictionaries like this
