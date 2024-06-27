@@ -19,7 +19,7 @@ print(visits)
 {'Mexico': {'Puerto Vallarta', 'Tulum'}, 'Japna': {'Hukone'}, 'France': {'Aries'}}
 ```
 
-2 Program to wrao the example above in  a class with helper method to access the dynamic inner state stored in a dictionary
+2 Program to wrap the example above in  a class with helper method to access the dynamic inner state stored in a dictionary
 
 about the code
 ```text
