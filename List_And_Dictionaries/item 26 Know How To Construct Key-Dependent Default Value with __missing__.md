@@ -83,3 +83,39 @@ The file pointer is then moved to the beginning of the file using handle.seek(0)
 The file's contents are read into image_data.
 This approach encapsulates the file-opening logic within the dictionary subclass, making the main code cleaner and more intuitive.
 ```
+
+Read this example first before lokking to __missing__ example
+```python
+pictures = {}
+path = 'logotodo.png'
+if (handle := pictures.get(path)) is None:
+    try:
+        handle = open(path, 'a+b')
+    except OSError:
+        print(f'Failed to open path {path}')
+        raise
+    else:
+        pictures[path] = handle
+ 
+handle.seek(0)
+image_data = handle.read()
+
+# next example
+pictures = {}
+path = 'logotodo.png'
+try:
+    handle = pictures.setdefault(path, open(path, 'a+b'))
+except OSError:
+    print(f'Failed to open path {path}')
+    raise
+else:
+    handle.seek(0)
+    image_data = handle.read
+```
+Conclusion
+```text
+better use defaultdict type Over setdefault to handlel missing value
+in some of  the situation both of these will become a bad choice so in that
+case use __missing__
+to read and write the images with pathnames as needed
+```
