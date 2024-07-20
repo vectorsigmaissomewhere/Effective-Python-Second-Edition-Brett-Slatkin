@@ -1,6 +1,9 @@
-# ===========================Program Number one ==================================
-# storing the data in dictionary instead of predefined attributes for each student
-# this program stores student name and with related to name it stoes the value in list 
+===========================Program Number one ==================================
+```text
+storing the data in dictionary instead of predefined attributes for each student
+this program stores student name and with related to name it stoes the value in list
+```
+ 
 ```python
 class SimpleGradebook:
     def __init__(self):
@@ -31,11 +34,13 @@ print(book.average_grade('Albert Einstein'))
 print(book._grades) # {'Issac Newton': [90, 95, 85], 'Albert Einstein': [90]}
 ```
 
-"""
-# ==========================Program Number Two =================================
-# Extending dictionary to map not only marks but also map subject 
-# inner dictionary, map subjects to a list of grades 
-# using defaultdict instance for the inner dictionary to handle missing subjects
+
+==========================Program Number Two =================================
+```text
+Extending dictionary to map not only marks but also map subject 
+inner dictionary, map subjects to a list of grades 
+using defaultdict instance for the inner dictionary to handle missing subjects
+```
 
 ```python
 from collections import defaultdict
@@ -71,14 +76,16 @@ book.report_grade('Albert Einstein', 'Gym', 90)
 book.report_grade('Albert Einstein', 'Gym', 95)
 print(book.average_grade('Albert Einstein')) # 81.25
 ```
+```text
+Program number one and program number 2 is the almost same # we just created one inner dictionary 
+````
 
-# Program number one and program number 2 is the almost same # we just created one inner dictionary 
-"""
-
-#=========================Program three================================
-# what to do where there is one more value that relates to the value means subject
-# using tuple of (score, weight) in the values list
-# this program takes weight which is like measure the student performance in each term in weight
+=========================Program three================================
+```text
+what to do where there is one more value that relates to the value means subject
+using tuple of (score, weight) in the values list
+this program takes weight which is like measure the student performance in each term in weight
+```
 
 ```python
 from collections import defaultdict
@@ -170,5 +177,10 @@ math.report_grade(70, 0.80)
 gym = albert.get_subject('Gym')
 gym.report_grade(100, 0.40)
 gym.report_grade(85, 0.60)
-print(albert.average_grade())
+print(albert.average_grade()) # 80.25
+```
+
+```text
+use namedtuple for lightweight, immutable data containers 
+create multiple classes when your internal state dictionaries get complicated
 ```
