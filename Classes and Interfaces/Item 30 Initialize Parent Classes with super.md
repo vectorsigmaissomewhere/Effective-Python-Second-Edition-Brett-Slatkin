@@ -161,3 +161,9 @@ output
 3.0
 ```
 
+Conclusion
+```text
+- Python standard method resolution order solves the problems of superclass initialization order and diamond inheritance
+- Use the super built-in function with zero arguments to initalize parent classes
+```
+
