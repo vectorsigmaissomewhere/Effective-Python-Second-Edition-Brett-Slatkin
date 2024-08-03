@@ -122,7 +122,7 @@ output
 
 Conclusion
 ```text
-Avoid using multiple inheritance with instance attribute and __init__ if mix-in classes can achieve the same outcome
-Mix-ins can include instance methods or class methods, depending on your needs
-Compose mix-ins to create complex functionality from simple behaviors
+- Avoid using multiple inheritance with instance attribute and __init__ if mix-in classes can achieve the same outcome
+- Mix-ins can include instance methods or class methods, depending on your needs
+- Compose mix-ins to create complex functionality from simple behaviors
 ```
