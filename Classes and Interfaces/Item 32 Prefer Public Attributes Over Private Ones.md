@@ -48,7 +48,7 @@ Output
 ```text
 True
 ```
-Output
+Conclusion
 ```text
 Why class methods that is get_private_field() method can acess the __private_field because
 Class method have access to private attributes because they are declared within the surrounding class block.
