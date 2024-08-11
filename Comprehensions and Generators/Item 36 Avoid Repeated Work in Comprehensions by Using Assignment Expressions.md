@@ -1,4 +1,4 @@
-```text
+```python
 stock = {
     'nails': 125,
     'screws': 35,
