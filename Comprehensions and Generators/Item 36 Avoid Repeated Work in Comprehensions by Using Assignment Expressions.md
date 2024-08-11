@@ -1,3 +1,8 @@
+About this section
+```text
+A common pattern with comprehension with list, dict, and set variants is
+the need to reference the same computation in multiple places
+``` 
 ```python
 stock = {
     'nails': 125,
