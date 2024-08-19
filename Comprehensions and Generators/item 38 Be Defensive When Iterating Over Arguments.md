@@ -18,3 +18,18 @@ output
 11.538461538461538, 26.923076923076923, 61.53846153846154]
 True
 ```
+program number 2
+```python
+def read_visits(data_path):
+    with open(data_path) as f:
+        for line in f:
+            yield int(line)
+
+it = read_visits('my_numbers.txt')
+percentages = normalize(it)
+print(percentages)
+```
+output
+```text
+[]
+```
