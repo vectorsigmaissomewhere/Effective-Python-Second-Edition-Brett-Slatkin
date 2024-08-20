@@ -1,4 +1,17 @@
 Program number 1
+```text
+A function that takes a list of objects as a parameter.
+Here analyze tourism numbers for the U.S. state of Texas.
+Imagine the list i.e the data set is the number of visitors
+to each city(in milliona per year).
+I'd like to figure out what percentage of overall tourism each city receives.
+
+To do this,
+we have a normalization function that sums the input to
+determine the total number of tourists per year and
+then divides each city's individual visitor counts
+by the total to find that city's contribution to the whole.
+```
 ```python
 def normalize(numbers):
     total = sum(numbers)
@@ -19,6 +32,19 @@ output
 True
 ```
 program number 2
+```text
+To scale this up, I need to read the data from a file that
+contains every city in all of Texas.
+I define a generator to do this because then I can
+reuse the same function later
+In output
+You will get an empty list because
+an iterator produces its results only
+a single time.
+If you iterate over an iterator or a generator that has
+already raised a StopIteration exception,
+you won't get any results the second time around.
+```
 ```python
 def read_visits(data_path):
     with open(data_path) as f:
