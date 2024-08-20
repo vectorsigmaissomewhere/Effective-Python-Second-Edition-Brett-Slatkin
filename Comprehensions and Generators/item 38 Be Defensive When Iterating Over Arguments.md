@@ -46,16 +46,97 @@ already raised a StopIteration exception,
 you won't get any results the second time around.
 ```
 ```python
+def normalize(numbers):
+    total = sum(numbers)
+    result = []
+    for value in numbers:
+        percent = 100 * value / total
+        result.append(percent)
+    return result
+    
 def read_visits(data_path):
-    with open(data_path) as f:
-        for line in f:
-            yield int(line)
+  with open(data_path) as f:
+      for line in f:
+          yield int(line)
 
 it = read_visits('my_numbers.txt')
 percentages = normalize(it)
 print(percentages)
 ```
+my_numbers.txt
+```text
+15
+30
+80
+```
 output
 ```text
 []
+```
+Program number 3 
+```text
+Reason on why you get this because
+an iterator produces its results only a single time.,
+If you iterate over an iterator or a generator that has
+already raised a StopIteration exception, you won't get any results
+the second time around:
+
+But here, no StopIteration exception is raised
+These functions can't tell the difference between
+an iterator that has no output and an iterator
+that had output and is now exhausted.
+```
+```python
+def normalize(numbers):
+    total = sum(numbers)
+    result = []
+    for value in numbers:
+        percent = 100 * value / total
+        result.append(percent)
+    return result
+    
+def read_visits(data_path):
+  with open(data_path) as f:
+      for line in f:
+          yield int(line)
+
+it = read_visits('my_numbers.txt')
+print(list(it))
+print(list(it))
+```
+output
+```text
+[15, 30, 80]
+[]
+```
+program number 4
+```text
+To solve program number 3 problem
+This is the same function as before, but it defensively copies the input iterator
+```
+```python
+def normalize_copy(numbers):
+    numbers_copy = list(numbers) # copy the iterator
+    total = sum(numbers_copy)
+    result = []
+    for value in numbers_copy:
+        percent = 100 * value / total
+        result.append(percent)
+    return result
+
+def read_visits(data_path):
+  with open(data_path) as f:
+      for line in f:
+          yield int(line)
+
+# Now the function works correctly on the read_visits generator's return value
+it = read_visits('my_numbers.txt')
+percentages = normalize_copy(it)
+print(percentages)
+print(sum(percentages) == 100.0)
+```
+output
+```text
+[12.0, 24.0, 64.0]
+True
 ```
