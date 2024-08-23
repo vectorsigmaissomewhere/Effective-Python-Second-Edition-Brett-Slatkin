@@ -140,3 +140,31 @@ output
 [12.0, 24.0, 64.0]
 True
 ```
+
+Program number 5
+```text
+Proram with program number 4 is that 
+input iterator content can be exteremly large 
+this could cause the program to run out of memory and crash
+To solve this accept a function that returns a new iterator each time it's called
+```
+
+```python
+def normalize_func(get_iter):
+    total = sum(get_iter()) # New iterator
+    result = []
+    for value in get_iter(): # New iterator
+        percent = 100 * value / total
+        result.append(percent)
+    return result
+# to use normalize_func pass a lambda expression that calls
+# the generator and produces a new iterator each time
+path = 'my_numbers.txt'
+percentages = normalize_func(lambda: read_visits(path))
+print(percentages)
+print(sum(percentages) == 100.0)
+```
+output
+```text
+[11.538461538461538, 26.923076923076923, 61.53846153846154]
+```
