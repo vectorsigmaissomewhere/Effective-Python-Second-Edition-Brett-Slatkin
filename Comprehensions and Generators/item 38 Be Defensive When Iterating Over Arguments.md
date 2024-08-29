@@ -189,3 +189,42 @@ output
 ```text
 [11.538461538461538, 26.923076923076923, 61.53846153846154]
 ```
+
+Program number 6
+```python
+def normalize_defensive(numbers):
+    if iter(numbers) is numbers:
+        raise TypeError('Must supply a container')
+    total = sum(numbers)
+    result = []
+    for value in numbers:
+        percent = 100 * value / total
+        result.append(percent)
+    return result
+```
+
+Program number 7
+```python
+from collections.abc import Iterator
+
+def normalize_defensive(numbers):
+    if isinstance(numbers, Iterator): # Another way to check
+        raise TypeError('Must supply a container')
+    total = sum(numbers)
+    result = []
+    for value in numbers:
+        percent = 100 * value / total
+        result.append(percent)
+    return result
+
+visits = [15, 35, 80]
+percentages = normalize_defensive(visits)
+print(sum(percentages)==100.0)
+visits = ReadVisits(path)
+percentages = normalize_defensive(visits)
+print(sum(percentages)==100.0)
+
+visits = [15, 35, 80]
+it = iter(visits)
+normalize_defensive(it)
+```
