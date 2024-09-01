@@ -228,3 +228,8 @@ visits = [15, 35, 80]
 it = iter(visits)
 normalize_defensive(it)
 ```
+
+Program number 8
+```text
+
+```
