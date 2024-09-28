@@ -98,7 +98,7 @@ a yield expression has not been encountered yet,
 so the only valid value for calling send initially is None
 ```
 
-````python
+```python
 def my_generator():
     received = yield 1
     print(f'received = {received}')
